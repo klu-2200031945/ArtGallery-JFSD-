@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist - Virtual Art Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Artist Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="artist.html">Artist</a></li>
+                <li><a href="visitor.html">Visitor</a></li>
+                <li><a href="curator.html">Curator</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Upload Artwork</h2>
+        <form id="uploadForm">
+            <input type="text" id="artistArtworkTitle" placeholder="Artwork Title" required>
+            <input type="text" id="artistArtworkDescription" placeholder="Description" required>
+            <input type="url" id="artistArtworkImage" placeholder="Image URL" required>
+            <button type="submit">Upload Artwork</button>
+        </form>
+        <h3>Your Artworks</h3>
+        <div id="artistArtworks"></div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Virtual Art Gallery. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

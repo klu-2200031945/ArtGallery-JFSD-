@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Virtual Art Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Panel</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="artist.html">Artist</a></li>
+                <li><a href="visitor.html">Visitor</a></li>
+                <li><a href="curator.html">Curator</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Manage Artworks</h2>
+        <form id="artworkForm">
+            <input type="text" id="artworkTitle" placeholder="Artwork Title" required>
+            <input type="text" id="artworkDescription" placeholder="Description" required>
+            <input type="url" id="artworkImage" placeholder="Image URL" required>
+            <button type="submit">Add Artwork</button>
+        </form>
+        <h3>Current Artworks</h3>
+        <div id="currentArtworks"></div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Virtual Art Gallery. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

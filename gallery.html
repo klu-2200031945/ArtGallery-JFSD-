@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Virtual Art Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+
+        /* Gallery Styles */
+        .container-block {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .heading {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        .opt-cont {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .tab {
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            font-size: 18px;
+            border: 1px solid #333;
+            border-radius: 5px;
+        }
+        .tab-active {
+            background-color: #333;
+            color: #fff;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .img {
+            width: 300px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .image-block {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 10px;
+        }
+        .img:hover .overlay {
+            opacity: 1;
+        }
+        .desc {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+        }
+        .title {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        .info {
+            font-size: 14px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Art Gallery</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="artist.html">Artist</a></li>
+                <li><a href="visitor.html">Visitor</a></li>
+                <li><a href="curator.html">Curator</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Artworks Collection</h2>
+
+        <div class="container-block bg">
+            <div class="opt-cont">
+                <p class="tab tab-active" data-filter="all">All</p>
+                <p class="tab" data-filter="modernarts">Modern Arts</p>
+                <p class="tab" data-filter="sculptures">Sculptures</p>
+                <p class="tab" data-filter="traditionalarts">Traditional Arts</p>
+            </div>
+            <div class="content">
+                <!-- Modern Arts Images -->
+                <div class="img modernarts">
+                    <img class="image-block" src="https://cdn.shopify.com/s/files/1/0625/3818/6989/files/2_5acf9bab-5dd3-4e04-b42c-d4985ccda17b.jpg?v=1676615530" alt="Modern Art 1">
+                    <div class="overlay"></div>
+                    <div class="desc">
+                        <p class="title">Modern Art 1</p>
+                        <p class="info">A brief description of Modern Art 1.</p>
+                    </div>
+                </div>
+                <div class="img modernarts">
+                    <img class="image-block" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR6oExRVtrt8IfW3aqSpMG2DRI9BeZaONyiw&s" alt="Modern Art 2">
+                    <div class="overlay"></div>
+                    <div class="desc">
+                        <p class="title">Modern Art 2</p>
+                        <p class="info">A brief description of Modern Art 2.</p>
+                    </div>
+                </div>
+
+                <!-- Sculptures Images -->
+                <div class="img sculptures hidden">
+                    <img class="image-block" src="https://philippefaraut.com/cdn/shop/products/Liana-desat_5456-sfw_1600x.jpg?v=1615149371" alt="Sculpture Art 1">
+                    <div class="overlay"></div>
+                    <div class="desc">
+                        <p class="title">Sculpture Art 1</p>
+                        <p class="info">A brief description of Sculpture Art 1.</p>
+                    </div>
+                </div>
+                <div class="img sculptures hidden">
+                    <img class="image-block" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH5TfTbRN4hatUq8C0kWaASMLtmO5Hz1QBOw&s" alt="Sculpture Art 2">
+                    <div class="overlay"></div>
+                    <div class="desc">
+                        <p class="title">Sculpture Art 2</p>
+                        <p class="info">A brief description of Sculpture Art 2.</p>
+                    </div>
+                </div>
+
+                <!-- Traditional Arts Images -->
+                <div class="img traditionalarts hidden">
+                    <img class="image-block" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_b9ojxpBgWMdGv9xwwXH3TIBcWHd9dFJF5w&s" alt="Traditional Art 1">
+                    <div class="overlay"></div>
+                    <div class="desc">
+                        <p class="title">Traditional Art 1</p>
+                        <p class="info">A brief description of Traditional Art 1.</p>
+                    </div>
+                </div>
+                <div class="img traditionalarts hidden">
+                    <img class="image-block" src="https://m.media-amazon.com/images/I/71KFS4gbxnL._AC_UF1000,1000_QL80_.jpg" alt="Traditional Art 2">
+                    <div class="overlay"></div>
+                    <div class="desc">
+                        <p class="title">Traditional Art 2</p>
+                        <p class="info">A brief description of Traditional Art 2.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Virtual Art Gallery. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for filtering the gallery
+        const tabs = document.querySelectorAll('.tab');
+        const images = document.querySelectorAll('.img');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                tabs.forEach(t => t.classList.remove('tab-active'));
+                // Add active class to clicked tab
+                tab.classList.add('tab-active');
+                
+                const filter = tab.getAttribute('data-filter');
+
+                // Show/Hide images based on filter
+                images.forEach(image => {
+                    if (filter === 'all') {
+                        image.classList.remove('hidden');
+                    } else {
+                        if (image.classList.contains(filter)) {
+                            image.classList.remove('hidden');
+                        } else {
+                            image.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

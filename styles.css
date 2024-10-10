@@ -1,0 +1,161 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    background: #333; /* Dark background for header */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px; /* Increased margin for better spacing */
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+header nav ul li a:hover {
+    color: #3498db; /* Change color on hover */
+    text-decoration: underline; /* Adds underline on hover for better UX */
+}
+
+/* Main Styles */
+main {
+    padding: 20px;
+    text-align: center; /* Center text in the main section */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333; /* Dark background for footer */
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Artwork List Styles */
+.artwork-list {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping to next line */
+    justify-content: center; /* Center items in the container */
+    gap: 20px; /* Space between items */
+    padding: 20px; /* Add padding around the artwork list */
+}
+
+.artwork {
+    background: white; /* White background for each artwork */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Inner padding */
+    width: 200px; /* Fixed width for each artwork */
+    text-align: center; /* Center text */
+    transition: transform 0.2s; /* Animation for hover effect */
+}
+
+.artwork:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.artwork img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for images */
+}
+
+/* Artwork Cost Styles */
+.artwork-cost {
+    color: #e74c3c; /* Highlight cost in a different color (red) */
+    font-weight: bold; /* Make cost bold */
+    font-size: 1.2em; /* Increase font size */
+}
+
+/* Exhibition Form Styles */
+.exhibition-form {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 300px; /* Fixed width for form */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.exhibition-form h2 {
+    margin-top: 0;
+}
+
+.exhibition-form input,
+.exhibition-form textarea,
+.exhibition-form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.exhibition-form button {
+    background: #333;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease; /* Smooth transition */
+}
+
+.exhibition-form button:hover {
+    background: #555;
+}
+
+/* Current Exhibitions Styles */
+.current-exhibitions {
+    margin-top: 20px;
+}
+
+.current-exhibitions h3 {
+    margin-top: 0;
+}
+
+/* Exhibition Display */
+.exhibition {
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .artwork {
+        width: 90%; /* Adjust artwork width on smaller screens */
+    }
+
+    .exhibition-form {
+        width: 90%; /* Adjust form width on smaller screens */
+    }
+
+    header nav ul li {
+        display: block; /* Stack navigation items on smaller screens */
+        margin: 5px 0; /* Vertical spacing for stacked items */
+    }
+}
